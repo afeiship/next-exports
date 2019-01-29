@@ -5,10 +5,10 @@
   nx.exports = function(inMethods, inSource, inTarget) {
     inMethods.forEach(function(method) {
       inTarget[method] = function() {
-        inSource[method].apply(inSource, arguments);
+        return inSource[method].apply(inTarget, arguments);
       };
     });
-    return inContext;
+    return inTarget;
   };
 
   if (typeof module !== 'undefined' && module.exports) {
