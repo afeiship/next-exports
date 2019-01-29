@@ -19,5 +19,5 @@ test('nx.exports', function() {
 
   var rs = nx.exports(['fn1', 'fn2'], obj, result);
   expect(Object.keys(rs)).toEqual(['name', 'fn1', 'fn2']);
-  expect(rs.fn2()).toBe('fn2_result-name');
+  expect(rs.fn2()).toBe('fn2_1290657123@qq.com');
 });

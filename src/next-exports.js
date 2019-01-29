@@ -5,7 +5,7 @@
   nx.exports = function(inMethods, inSource, inTarget) {
     inMethods.forEach(function(method) {
       inTarget[method] = function() {
-        return inSource[method].apply(inTarget, arguments);
+        return inSource[method].apply(inSource, arguments);
       };
     });
     return inTarget;
